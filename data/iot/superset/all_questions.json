@@ -1,0 +1,90 @@
+[
+  {
+    "module": "Module 1",
+    "questions": [
+      {"q": "What are some real-world applications of IoT in different industries? Provide examples.", "topic": "IoT Applications", "type": "theory"},
+      {"q": "Explain the five-layer IoT framework. What role does each layer play?", "topic": "IoT Framework", "type": "theory"},
+      {"q": "How has cloud computing influenced the economics of IoT?", "topic": "Cloud Computing", "type": "application"},
+      {"q": "What are the different types of sensors used in IoT devices? Explain their functions.", "topic": "Sensors", "type": "theory"},
+      {"q": "Compare microcontrollers and microprocessors in the context of IoT applications.", "topic": "Hardware", "type": "comparison"},
+      {"q": "What is the role of real-time operating systems (RTOS) in IoT applications?", "topic": "RTOS", "type": "theory"},
+      {"q": "Discuss the importance of secure boot and patch management in IoT security.", "topic": "IoT Security", "type": "application"},
+      {"q": "How do wind turbines utilize IoT technology to optimize performance?", "topic": "Industrial IoT", "type": "case-based"},
+      {"q": "Describe the use of IoT in smart agriculture. How does it help in precision farming?", "topic": "Smart Agriculture", "type": "application"},
+      {"q": "Explain the working of a clinical hematology analyzer with IoT integration.", "topic": "Healthcare IoT", "type": "case-based"},
+      {"q": "How do companies like GE use IoT to transition from machine builders to software-driven service providers?", "topic": "Industrial IoT", "type": "case-based"},
+      {"q": "Explain how IoT is transforming traditional enterprise software into next generation enterprise applications.", "topic": "Enterprise IoT", "type": "theory"},
+      {"q": "Explain the terms: SOC, SIP, SDE & IDE, Memory Footprint, 6 Sigma Process.", "topic": "IoT Terminologies", "type": "definition"}
+    ]
+  },
+  {
+    "module": "Module 2",
+    "questions": [
+      {"q": "Explain with an example of sending an email with respect to OSI Model.", "topic": "OSI Model", "type": "application"},
+      {"q": "Outline the tradeoff between range and power consumption for four different connection technologies of IoT.", "topic": "Wireless Tradeoff", "type": "theory"},
+      {"q": "Write a short note on range and data rate.", "topic": "Range vs Data Rate", "type": "theory"},
+      {"q": "Explain the role of satellites and cellular networks with respect to connect layer.", "topic": "Connectivity", "type": "theory"},
+      {"q": "Justify the role of application layer in IoT space which makes it easy to connect new machines.", "topic": "Application Layer", "type": "application"},
+      {"q": "Discuss the role of network security in terms of connecting new machines.", "topic": "Network Security", "type": "application"},
+      {"q": "Explain the terms: ZigBee, WiFi, LoRaWAN.", "topic": "Wireless Technologies", "type": "definition"},
+      {"q": "Analyze cybersecurity risks in oil and gas platform networks and suggest mitigation strategies.", "topic": "IoT Security", "type": "case-based"},
+      {"q": "Compare SQL and NoSQL approaches as IoT data storage solutions.", "topic": "Data Storage", "type": "comparison"},
+      {"q": "Write a short note on Time Series and Cloud Computing.", "topic": "Collect Layer", "type": "theory"},
+      {"q": "Illustrate heterogeneous data with three fundamental design principles.", "topic": "Data Management", "type": "application"},
+      {"q": "Illustrate how collect in practice is followed in water, power, healthcare, and financial services.", "topic": "Collect Layer Applications", "type": "application"}
+    ]
+  },
+  {
+    "module": "Module 3",
+    "questions": [
+      {"q": "Explain the enterprise application.", "topic": "Enterprise Applications", "type": "theory"},
+      {"q": "Explain how precision machines improve quality of service and reduce cost of service.", "topic": "Precision Machines", "type": "application"},
+      {"q": "Outline machine business models in precision machines.", "topic": "Business Models", "type": "theory"},
+      {"q": "Explain how precision service lowers consumables cost and provides higher quality service.", "topic": "Precision Service", "type": "application"},
+      {"q": "List and explain advantages of precision machines.", "topic": "Precision Machines", "type": "theory"},
+      {"q": "List and explain benefits of precision service industries.", "topic": "Precision Service", "type": "theory"},
+      {"q": "Illustrate packaged IoP applications.", "topic": "IoP Applications", "type": "application"},
+      {"q": "Discuss factors governing advantages of next generation middleware.", "topic": "Middleware", "type": "theory"}
+    ]
+  },
+  {
+    "module": "Module 4",
+    "questions": [
+      {"q": "Explain how Joy Global’s longwall mining system uses sensors and data collection.", "topic": "Mining IoT", "type": "case-based"},
+      {"q": "Discuss components and working of longwall mining system.", "topic": "Mining IoT", "type": "case-based"},
+      {"q": "Describe data connectivity and network architecture in longwall mining.", "topic": "IoT Architecture", "type": "case-based"},
+      {"q": "Explain predictive maintenance using oil and vibration analysis.", "topic": "Predictive Maintenance", "type": "application"},
+      {"q": "Explain use of PCA, regression, clustering in mining IoT.", "topic": "Data Analytics", "type": "application"},
+      {"q": "Discuss business impact of IoT in mining operations.", "topic": "Industrial IoT", "type": "case-based"},
+      {"q": "Explain JoySmart Solutions in IoT strategy.", "topic": "Industrial IoT", "type": "case-based"},
+      {"q": "Explain time-synchronized data collection in mining.", "topic": "Data Collection", "type": "application"},
+      {"q": "Explain role of data concentrator and wireless systems in mining.", "topic": "IoT Architecture", "type": "case-based"},
+      {"q": "Explain prediction of roof collapse using IoT data.", "topic": "Predictive Analytics", "type": "case-based"},
+      {"q": "Explain IoT in Pitney Bowes precision mailing system.", "topic": "Industrial IoT", "type": "case-based"},
+      {"q": "Explain AGCO precision agriculture data collection system.", "topic": "Smart Agriculture", "type": "case-based"},
+      {"q": "Explain real-time monitoring in AGCO agriculture.", "topic": "Real-time Analytics", "type": "application"},
+      {"q": "Compare IoT in mailing, mining and agriculture.", "topic": "IoT Comparison", "type": "comparison"}
+    ]
+  },
+  {
+    "module": "Module 5",
+    "questions": [
+      {"q": "Explain IoT in precision healthcare patient monitoring.", "topic": "Healthcare IoT", "type": "application"},
+      {"q": "Discuss challenges of wearable health devices with cloud platforms.", "topic": "Healthcare IoT", "type": "application"},
+      {"q": "Explain Connect–Collect–Learn–Do in precision hospital.", "topic": "IoT Framework", "type": "application"},
+      {"q": "Discuss privacy and security in healthcare IoT.", "topic": "IoT Security", "type": "application"},
+      {"q": "Explain smart meters in power distribution.", "topic": "Smart Grid", "type": "application"},
+      {"q": "Explain predictive maintenance in power systems.", "topic": "Predictive Maintenance", "type": "application"},
+      {"q": "Explain real-time data in energy optimization.", "topic": "Energy IoT", "type": "application"},
+      {"q": "Discuss challenges in IoT power utilities.", "topic": "Smart Grid", "type": "theory"},
+      {"q": "Explain IoT in water monitoring and leakage detection.", "topic": "Smart Water", "type": "application"},
+      {"q": "Explain data analytics in water demand forecasting.", "topic": "Data Analytics", "type": "application"},
+      {"q": "Explain IoT-based water quality monitoring system.", "topic": "Smart Water", "type": "application"},
+      {"q": "Explain role of cloud and edge in water networks.", "topic": "Cloud & Edge", "type": "application"},
+      {"q": "Explain telemetry in race car performance.", "topic": "Telemetry", "type": "case-based"},
+      {"q": "Explain sensor data in driver behavior optimization.", "topic": "Telemetry", "type": "application"},
+      {"q": "Explain predictive analysis in vehicles.", "topic": "Predictive Analytics", "type": "application"},
+      {"q": "Describe IoT ecosystem in precision motorsport.", "topic": "IoT Ecosystem", "type": "case-based"}
+    ]
+  }
+]

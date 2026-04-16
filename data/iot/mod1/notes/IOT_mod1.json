@@ -1,0 +1,98 @@
+[
+  {
+    "id": "iot_n1",
+    "subject": "IOT",
+    "module": "Module 1",
+    "topic": "Introduction to IoT",
+    "content": "Internet of Things (IoT) refers to a system of interconnected physical devices (Things) that communicate and exchange data over the internet. Unlike traditional applications focused on people (Internet of People), IoT emphasizes machines, sensors, and automated systems. Enterprise IoT focuses on industrial-scale applications such as power grids, agriculture, transportation, and healthcare. These systems are complex and require structured frameworks to distinguish real-world applications from hype. IoT enables smarter operations by integrating sensing, connectivity, analytics, and action into a unified system.",
+    "keywords": ["IoT", "introduction", "enterprise IoT", "things", "connected devices"]
+  },
+  {
+    "id": "iot_n2",
+    "subject": "IOT",
+    "module": "Module 1",
+    "topic": "Economics of IoT",
+    "content": "The rise of IoT is driven by fundamental shifts in the economics of computing. Traditional enterprise applications had high operational costs due to maintenance, security, and infrastructure management, often exceeding the purchase cost multiple times. With cloud computing, these costs are significantly reduced through standardization, automation, and scalability. Cloud platforms replace manual labor with automated systems, reducing costs and improving flexibility. IoT leverages these economic benefits to enable large-scale deployment of connected devices and data-driven decision-making.",
+    "keywords": ["economics", "cloud computing", "cost reduction", "automation", "enterprise systems"]
+  },
+  {
+    "id": "iot_n3",
+    "subject": "IOT",
+    "module": "Module 1",
+    "topic": "IoT vs Internet of People",
+    "content": "Traditional enterprise software systems are designed for people, where data input is manual and infrequent. In contrast, IoT systems involve machines that generate massive volumes of data continuously through sensors. There are significantly more 'things' than people, and these devices communicate autonomously. For example, industrial machines can generate data multiple times per second, whereas human input is occasional. IoT systems are therefore characterized by high-frequency data generation, automation, and scalability, making them fundamentally different from human-centric systems.",
+    "keywords": ["IoT vs IoP", "data generation", "sensors", "automation", "machine data"]
+  },
+  {
+    "id": "iot_n4",
+    "subject": "IOT",
+    "module": "Module 1",
+    "topic": "Next Generation Enterprise Software",
+    "content": "Enterprise software has evolved through multiple generations. The first generation focused on automating business processes using client-server architectures. The second generation introduced Software-as-a-Service (SaaS), where vendors manage software delivery and maintenance. The next generation integrates IoT, combining sensors, connectivity, and analytics to create intelligent systems. These systems extend beyond traditional automation to enable real-time decision-making, predictive analytics, and improved operational efficiency across industries.",
+    "keywords": ["enterprise software", "SaaS", "evolution", "automation", "IoT integration"]
+  },
+  {
+    "id": "iot_n5",
+    "subject": "IOT",
+    "module": "Module 1",
+    "topic": "IoT Framework Overview",
+    "content": "The IoT framework is a structured model used to understand and design IoT systems. It consists of five layers: Things, Connect, Collect, Learn, and Do. Each layer represents a stage in the data lifecycle, from sensing to action. The framework is vendor-neutral and applicable across industries. It helps organizations systematically build, analyze, and deploy IoT solutions by breaking down complex systems into manageable components.",
+    "keywords": ["IoT framework", "layers", "Things", "Connect", "Collect", "Learn", "Do"]
+  },
+  {
+    "id": "iot_n6",
+    "subject": "IOT",
+    "module": "Module 1",
+    "topic": "Things Layer",
+    "content": "The Things layer consists of physical devices such as sensors, machines, and equipment. These devices collect data from the environment and form the foundation of IoT systems. Modern devices include embedded processors, operating systems, and communication capabilities. Sensors are becoming cheaper and more powerful, enabling widespread deployment. However, as devices become more complex, they also introduce security vulnerabilities that must be addressed.",
+    "keywords": ["Things layer", "sensors", "devices", "embedded systems", "hardware"]
+  },
+  {
+    "id": "iot_n7",
+    "subject": "IOT",
+    "module": "Module 1",
+    "topic": "Connect Layer",
+    "content": "The Connect layer enables communication between IoT devices and external systems. It involves networking technologies that transmit data based on factors such as distance, power consumption, and data rate. Technologies may include Wi-Fi, cellular networks, and low-power communication protocols. Proper connection management ensures reliable data transfer and secure communication between devices and platforms.",
+    "keywords": ["connect layer", "networking", "communication", "protocols", "connectivity"]
+  },
+  {
+    "id": "iot_n8",
+    "subject": "IOT",
+    "module": "Module 1",
+    "topic": "Collect Layer",
+    "content": "The Collect layer focuses on gathering and storing data generated by IoT devices. Data is often in the form of time-series data, which is continuously generated over time. Storage solutions include SQL, NoSQL, and specialized time-series databases. This layer ensures efficient handling of large volumes of data and prepares it for further analysis.",
+    "keywords": ["collect layer", "data collection", "time-series", "SQL", "NoSQL"]
+  },
+  {
+    "id": "iot_n9",
+    "subject": "IOT",
+    "module": "Module 1",
+    "topic": "Learn Layer",
+    "content": "The Learn layer involves analyzing collected data using statistical methods and machine learning techniques. It includes both supervised and unsupervised learning approaches to identify patterns, trends, and anomalies. This layer transforms raw data into actionable insights, enabling predictive analytics and intelligent decision-making.",
+    "keywords": ["learn layer", "machine learning", "analytics", "patterns", "prediction"]
+  },
+  {
+    "id": "iot_n10",
+    "subject": "IOT",
+    "module": "Module 1",
+    "topic": "Do Layer",
+    "content": "The Do layer represents the action phase of the IoT system. Based on insights generated in the Learn layer, actions are performed either automatically or through human intervention. These actions may include triggering alerts, controlling devices, or optimizing processes. The Do layer is critical for achieving business outcomes and completing the IoT data cycle.",
+    "keywords": ["do layer", "automation", "decision making", "actions", "business outcomes"]
+  },
+  {
+    "id": "iot_n11",
+    "subject": "IOT",
+    "module": "Module 1",
+    "topic": "Industrial IoT and GE Predix",
+    "content": "Industrial IoT (IIoT) focuses on applying IoT technologies in industrial environments. GE Predix is a platform developed by General Electric to build and manage industrial IoT applications. It provides services for data collection, storage, analytics, and application development. Predix enables real-time monitoring, predictive maintenance, and optimization of industrial systems, improving efficiency and reducing operational costs.",
+    "keywords": ["IIoT", "GE Predix", "industrial IoT", "analytics", "platform"]
+  },
+  {
+    "id": "iot_n12",
+    "subject": "IOT",
+    "module": "Module 1",
+    "topic": "Precision Machines and Applications",
+    "content": "Precision machines are advanced IoT-enabled systems that use sensors, analytics, and automation to improve performance and efficiency. These machines are widely used in industries such as agriculture, healthcare, energy, and transportation. Examples include smart turbines, agricultural equipment, and medical devices. Precision machines enable better service delivery, cost reduction, and enhanced quality through data-driven insights.",
+    "keywords": ["precision machines", "applications", "smart systems", "automation", "industry"]
+  }
+]

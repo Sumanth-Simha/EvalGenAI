@@ -1,0 +1,46 @@
+[
+  {
+    "id": "img_1",
+    "subject": "IOT",
+    "module": "mod1",
+    "topic": "IoT Framework",
+    "caption": "Five-layer IoT framework showing Things, Connect, Collect, Learn, and Do layers",
+    "tags": ["iot", "framework", "layers", "things", "connect", "collect", "learn", "do"],
+    "image_path": "data/iot/mod1/diagrams/images/iot_framework.png",
+    "diagram_type": "conceptual",
+    "importance": "high"
+  },
+  {
+    "id": "img_2",
+    "subject": "IOT",
+    "module": "mod1",
+    "topic": "GE IoT Framework",
+    "caption": "General Electric IoT architecture showing connectivity, cloud (Predix), services, and industrial applications",
+    "tags": ["ge", "iot", "industrial", "predix", "cloud"],
+    "image_path": "data/iot/mod1/diagrams/images/ge_iot_framework.png",
+    "diagram_type": "architecture",
+    "importance": "high"
+  },
+  {
+    "id": "img_3",
+    "subject": "IOT",
+    "module": "mod1",
+    "topic": "PTC IoT Framework",
+    "caption": "PTC smart connected product technology stack including ThingWorx platform, Axeda, and enterprise integration",
+    "tags": ["ptc", "thingworx", "iot", "stack", "architecture"],
+    "image_path": "data/iot/mod1/diagrams/images/ptc_framework.png",
+    "diagram_type": "architecture",
+    "importance": "medium"
+  },
+  {
+    "id": "img_4",
+    "subject": "IOT",
+    "module": "mod1",
+    "topic": "IoT Industry Examples",
+    "caption": "Examples of companies across IoT layers such as Things, Connect, Collect, Learn, and Do",
+    "tags": ["iot", "industry", "companies", "layers"],
+    "image_path": "data/iot/mod1/diagrams/images/industry_examples.png",
+    "diagram_type": "reference",
+    "importance": "medium"
+  }
+]

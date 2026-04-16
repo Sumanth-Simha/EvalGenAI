@@ -1,0 +1,120 @@
+[
+  {
+    "paper_id": "iot_ia1_2026",
+    "subject": "IOT",
+    "total_marks": 50,
+    "duration": "1h45m",
+    "pattern": {
+      "total_questions": 5,
+      "marks_per_question": 10,
+      "choice": "A/B"
+    },
+    "questions": [
+      {
+        "qno": 1,
+        "options": [
+          {
+            "label": "a",
+            "question": "Explain the five-layer IoT framework. What role does each layer play?",
+            "marks": 10,
+            "topic": "IoT Framework",
+            "blooms_level": ["K1", "K3"],
+            "co": "CO1"
+          },
+          {
+            "label": "b",
+            "question": "What are the different types of sensors used in IoT devices? Explain their functions.",
+            "marks": 10,
+            "topic": "Sensors in IoT",
+            "blooms_level": ["K1"],
+            "co": "CO1"
+          }
+        ]
+      },
+      {
+        "qno": 2,
+        "options": [
+          {
+            "label": "a",
+            "question": "Examine how companies like GE leverage IoT to transition from machine builders to service providers.",
+            "marks": 10,
+            "topic": "Industrial IoT (GE)",
+            "blooms_level": ["K3"],
+            "co": "CO1"
+          },
+          {
+            "label": "b",
+            "question": "Explain the terms SOC, SIP, SDE, Memory Footprint.",
+            "marks": 10,
+            "topic": "IoT Terminologies",
+            "blooms_level": ["K1"],
+            "co": "CO1"
+          }
+        ]
+      },
+      {
+        "qno": 3,
+        "options": [
+          {
+            "label": "a",
+            "question": "Demonstrate the OSI model using email transmission.",
+            "marks": 10,
+            "topic": "OSI Model",
+            "blooms_level": ["K3"],
+            "co": "CO2"
+          },
+          {
+            "label": "b",
+            "question": "Explain the role of Application Layer in IoT.",
+            "marks": 10,
+            "topic": "Application Layer",
+            "blooms_level": ["K1"],
+            "co": "CO2"
+          }
+        ]
+      },
+      {
+        "qno": 4,
+        "options": [
+          {
+            "label": "a",
+            "question": "Explain ZigBee and WiFi. Compare SQL vs NoSQL for IoT storage.",
+            "marks": 10,
+            "topic": "IoT Communication & Storage",
+            "blooms_level": ["K2", "K3"],
+            "co": "CO2"
+          },
+          {
+            "label": "b",
+            "question": "Write short note on Time Series and Cloud Computing.",
+            "marks": 10,
+            "topic": "Collect Layer",
+            "blooms_level": ["K1"],
+            "co": "CO2"
+          }
+        ]
+      },
+      {
+        "qno": 5,
+        "options": [
+          {
+            "label": "a",
+            "question": "Explain CRISP Data Mining Lifecycle.",
+            "marks": 10,
+            "topic": "Machine Learning Lifecycle",
+            "blooms_level": ["K1", "K3"],
+            "co": "CO3"
+          },
+          {
+            "label": "b",
+            "question": "Explain Learn layer with examples in Transportation and Healthcare.",
+            "marks": 10,
+            "topic": "Learn Layer",
+            "blooms_level": ["K1"],
+            "co": "CO3"
+          }
+        ]
+      }
+    ]
+  }
+]

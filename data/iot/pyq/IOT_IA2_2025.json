@@ -1,0 +1,118 @@
+{
+  "paper_id": "iot_ia2_2025",
+  "subject": "IOT",
+  "total_marks": 30,
+  "duration": "1h15m",
+  "pattern": {
+    "total_questions": 5,
+    "marks_per_question": 6,
+    "choice": "A/B"
+  },
+  "questions": [
+    {
+      "qno": 1,
+      "options": [
+        {
+          "label": "a",
+          "question": "Compare SQL and NOSQL approaches as the IoT data storage solutions.",
+          "marks": 6,
+          "topic": "IoT Data Storage",
+          "blooms_level": ["K1", "K3"],
+          "co": "CO1"
+        },
+        {
+          "label": "b",
+          "question": "Write short note on Time Series and Cloud Computing.",
+          "marks": 6,
+          "topic": "Collect Layer",
+          "blooms_level": ["K1"],
+          "co": "CO1"
+        }
+      ]
+    },
+    {
+      "qno": 2,
+      "options": [
+        {
+          "label": "a",
+          "question": "Illustrate how Collect in practice is followed in Water, Power, and Healthcare applications.",
+          "marks": 6,
+          "topic": "Collect Layer Applications",
+          "blooms_level": ["K3"],
+          "co": "CO1"
+        },
+        {
+          "label": "b",
+          "question": "List and explain the advantages of Precision Machines.",
+          "marks": 6,
+          "topic": "Precision Machines",
+          "blooms_level": ["K1"],
+          "co": "CO1"
+        }
+      ]
+    },
+    {
+      "qno": 3,
+      "options": [
+        {
+          "label": "a",
+          "question": "Discuss factors governing advantages of next generation middleware.",
+          "marks": 6,
+          "topic": "Middleware",
+          "blooms_level": ["K3"],
+          "co": "CO1"
+        },
+        {
+          "label": "b",
+          "question": "Explain CRISP Data Mining Lifecycle.",
+          "marks": 6,
+          "topic": "Machine Learning Lifecycle",
+          "blooms_level": ["K1"],
+          "co": "CO1"
+        }
+      ]
+    },
+    {
+      "qno": 4,
+      "options": [
+        {
+          "label": "a",
+          "question": "Explain how Precision Service lowers cost and improves quality.",
+          "marks": 6,
+          "topic": "Precision Service",
+          "blooms_level": ["K1", "K3"],
+          "co": "CO2"
+        },
+        {
+          "label": "b",
+          "question": "Illustrate packaged IoP applications.",
+          "marks": 6,
+          "topic": "IoP Applications",
+          "blooms_level": ["K1"],
+          "co": "CO2"
+        }
+      ]
+    },
+    {
+      "qno": 5,
+      "options": [
+        {
+          "label": "a",
+          "question": "Explain novelty detection in AI for jet engine anomaly detection.",
+          "marks": 6,
+          "topic": "Novelty Detection",
+          "blooms_level": ["K3"],
+          "co": "CO2"
+        },
+        {
+          "label": "b",
+          "question": "Explain Learn layer with examples in Transportation and Healthcare.",
+          "marks": 6,
+          "topic": "Learn Layer",
+          "blooms_level": ["K1"],
+          "co": "CO2"
+        }
+      ]
+    }
+  ]
+}

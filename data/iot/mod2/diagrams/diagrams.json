@@ -1,0 +1,57 @@
+[
+  {
+    "id": "iot_m2_d1",
+    "module": "Module 2",
+    "diagram_name": "osi_model_layers",
+    "title": "OSI Model Layers",
+    "image_path": "assets/diagrams/osi_model_layers.png",
+    "description": "The OSI model consists of seven layers: Physical, Data Link, Network, Transport, Session, Presentation, and Application. Each layer provides services to the layer above it and enables modular communication design.",
+    "topics": ["OSI Model", "Networking Fundamentals"],
+    "keywords": ["osi", "layers", "network stack", "7 layers"],
+    "use_case": "Used to explain layered communication architecture in IoT and networking systems"
+  },
+  {
+    "id": "iot_m2_d2",
+    "module": "Module 2",
+    "diagram_name": "range_vs_power_tradeoff",
+    "title": "Range vs Power Tradeoff",
+    "image_path": "assets/diagrams/range_vs_power_tradeoff.png",
+    "description": "This diagram compares wireless technologies based on power consumption and communication range. WiFi offers high range but consumes high power, while ZigBee and Bluetooth offer lower power consumption with shorter range. NFC operates at extremely low power and very short range.",
+    "topics": ["Wireless Communication", "IoT Connectivity"],
+    "keywords": ["range", "power", "wifi", "zigbee", "bluetooth", "nfc"],
+    "use_case": "Used to justify selection of communication technology in IoT systems"
+  },
+  {
+    "id": "iot_m2_d3",
+    "module": "Module 2",
+    "diagram_name": "range_vs_data_rate_tradeoff",
+    "title": "Range vs Data Rate Tradeoff",
+    "image_path": "assets/diagrams/range_vs_data_rate_tradeoff.png",
+    "description": "This diagram shows the tradeoff between communication range and data rate. Technologies like WiFi and WiMAX provide high data rates but lower range, while ZigBee and GSM offer longer range with lower data rates.",
+    "topics": ["Bandwidth", "Wireless Tradeoffs"],
+    "keywords": ["data rate", "range", "bandwidth", "frequency"],
+    "use_case": "Used to explain frequency and bandwidth tradeoffs in IoT networks"
+  },
+  {
+    "id": "iot_m2_d4",
+    "module": "Module 2",
+    "diagram_name": "iot_application_layer_architecture",
+    "title": "IoT Application Layer Architecture",
+    "image_path": "assets/diagrams/iot_application_layer_architecture.png",
+    "description": "This diagram shows the IoT application layer interacting with lower layers like TCP/IP and Data Link. It includes protocols like HTTP and security mechanisms that enable communication between IoT devices and servers.",
+    "topics": ["Application Layer", "IoT Architecture"],
+    "keywords": ["application layer", "http", "tcp/ip", "iot stack"],
+    "use_case": "Used to explain how IoT applications interact with network layers"
+  },
+  {
+    "id": "iot_m2_d5",
+    "module": "Module 2",
+    "diagram_name": "iot_connection_security_architecture",
+    "title": "IoT Connection Security Architecture",
+    "image_path": "assets/diagrams/iot_connection_security_architecture.png",
+    "description": "This diagram illustrates a secure industrial IoT network with business networks and control networks separated. It includes components such as firewalls, server racks, wireless access points, and PLC systems to ensure secure data transmission.",
+    "topics": ["Network Security", "Industrial IoT"],
+    "keywords": ["security", "firewall", "iot network", "plc", "industrial"],
+    "use_case": "Used to explain secure IoT architecture in enterprise and industrial environments"
+  }
+]

@@ -1,0 +1,128 @@
+{
+  "paper_id": "iot_ia3_2025",
+  "subject": "IOT",
+  "total_marks": 30,
+  "duration": "1h15m",
+  "pattern": {
+    "total_questions": 5,
+    "marks_per_question": 6,
+    "choice": "A/B"
+  },
+  "questions": [
+    {
+      "qno": 1,
+      "options": [
+        {
+          "label": "a",
+          "question": "How is data from Pitney Bowes inserters securely transmitted to GE Predix platform?",
+          "marks": 6,
+          "topic": "Industrial IoT (GE Predix)",
+          "blooms_level": ["K2"],
+          "co": "CO5",
+          "type": "case-based"
+        },
+        {
+          "label": "b",
+          "question": "What components make up a longwall mining system and what is its primary function?",
+          "marks": 6,
+          "topic": "Industrial IoT Applications",
+          "blooms_level": ["K2"],
+          "co": "CO5",
+          "type": "case-based"
+        }
+      ]
+    },
+    {
+      "qno": 2,
+      "options": [
+        {
+          "label": "a",
+          "question": "What is the purpose of oil and vibration analysis in Joy Global maintenance strategy?",
+          "marks": 6,
+          "topic": "Predictive Maintenance",
+          "blooms_level": ["K2"],
+          "co": "CO5",
+          "type": "case-based"
+        },
+        {
+          "label": "b",
+          "question": "What operations are combined in an AGCO Gleaner combine harvester?",
+          "marks": 6,
+          "topic": "Smart Agriculture",
+          "blooms_level": ["K1"],
+          "co": "CO5",
+          "type": "case-based"
+        }
+      ]
+    },
+    {
+      "qno": 3,
+      "options": [
+        {
+          "label": "a",
+          "question": "Explain how IoT improves patient monitoring in precision healthcare.",
+          "marks": 6,
+          "topic": "Healthcare IoT",
+          "blooms_level": ["K1"],
+          "co": "CO4",
+          "type": "application"
+        },
+        {
+          "label": "b",
+          "question": "Explain Connect–Collect–Learn–Do framework in a precision hospital environment.",
+          "marks": 6,
+          "topic": "IoT Framework",
+          "blooms_level": ["K2"],
+          "co": "CO4",
+          "type": "application"
+        }
+      ]
+    },
+    {
+      "qno": 4,
+      "options": [
+        {
+          "label": "a",
+          "question": "Explain how smart meters improve power distribution efficiency.",
+          "marks": 6,
+          "topic": "Smart Grid",
+          "blooms_level": ["K3"],
+          "co": "CO4",
+          "type": "application"
+        },
+        {
+          "label": "b",
+          "question": "Explain IoT-based water monitoring and leakage detection.",
+          "marks": 6,
+          "topic": "Smart Water Systems",
+          "blooms_level": ["K2"],
+          "co": "CO4",
+          "type": "application"
+        }
+      ]
+    },
+    {
+      "qno": 5,
+      "options": [
+        {
+          "label": "a",
+          "question": "Explain role of telemetry and real-time analytics in race car performance.",
+          "marks": 6,
+          "topic": "Telemetry",
+          "blooms_level": ["K3"],
+          "co": "CO5",
+          "type": "case-based"
+        },
+        {
+          "label": "b",
+          "question": "Describe IoT ecosystem in precision motorsport.",
+          "marks": 6,
+          "topic": "IoT Ecosystem",
+          "blooms_level": ["K3"],
+          "co": "CO5",
+          "type": "case-based"
+        }
+      ]
+    }
+  ]
+}

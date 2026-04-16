@@ -1,0 +1,62 @@
+# =========================
+# PROJECT CONFIG
+# =========================
+
+project:
+  name: EvalGenAI
+  version: 1.0
+
+
+# =========================
+# PATHS
+# =========================
+
+paths:
+  data: data/iot
+  chroma_db: ./chroma_db
+
+
+# =========================
+# EMBEDDING SETTINGS
+# =========================
+
+embedding:
+  model: all-MiniLM-L6-v2
+
+
+# =========================
+# COLLECTION NAMES
+# =========================
+
+collections:
+  answer_kb: iot_kb
+  question_kb: iot_qp
+
+
+# =========================
+# LLM SETTINGS
+# =========================
+
+llm:
+  provider: gemini
+  model: gemini-3-flash-preview
+  temperature: 0.3
+
+
+# =========================
+# RETRIEVAL SETTINGS
+# =========================
+
+retrieval:
+  top_k_answer: 5
+  top_k_qp: 15
+
+
+# =========================
+# SCORING (QP RAG)
+# =========================
+
+scoring:
+  assignment_weight: 3
+  ia_weight: 2
+  pyq_weight: 1

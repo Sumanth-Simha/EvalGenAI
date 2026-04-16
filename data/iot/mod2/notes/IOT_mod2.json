@@ -1,0 +1,90 @@
+[
+  {
+    "id": "iot_m2_n1",
+    "subject": "IOT",
+    "module": "Module 2",
+    "topic": "Connect Principles",
+    "content": "Connecting Things in IoT requires selecting appropriate communication technologies based on factors such as data volume, transmission distance, and power consumption. The choice of networking technology depends on constraints like cost, bandwidth, environment, and device capabilities. IoT connectivity must also ensure secure, reliable, and scalable communication between devices and cloud systems.",
+    "keywords": ["connect layer", "IoT connectivity", "communication", "networking"]
+  },
+  {
+    "id": "iot_m2_n2",
+    "subject": "IOT",
+    "module": "Module 2",
+    "topic": "OSI Model",
+    "content": "The OSI (Open Systems Interconnection) model is a conceptual framework used to standardize communication systems. It consists of seven layers: Physical, Data Link, Network, Transport, Session, Presentation, and Application. Each layer serves the one above it and is served by the one below it. This layered approach enables interoperability between different systems and helps isolate communication functions.",
+    "keywords": ["OSI model", "7 layers", "network architecture"]
+  },
+  {
+    "id": "iot_m2_n3",
+    "subject": "IOT",
+    "module": "Module 2",
+    "topic": "Data Link Layer",
+    "content": "The data-link layer is responsible for node-to-node communication between directly connected devices. It handles error detection and correction, flow control, and framing of data packets. It also defines how devices access the network and ensures reliable transmission. Technologies such as Ethernet, WiFi, and ZigBee operate at this layer.",
+    "keywords": ["data link layer", "error detection", "flow control", "ethernet", "wifi", "zigbee"]
+  },
+  {
+    "id": "iot_m2_n4",
+    "subject": "IOT",
+    "module": "Module 2",
+    "topic": "Range vs Power Tradeoff",
+    "content": "In IoT systems, there is a fundamental tradeoff between transmission range and power consumption. Technologies like WiFi offer longer range (30–100 meters) but consume high power, while ZigBee and Bluetooth consume less power but operate over shorter distances. NFC operates over very short distances with minimal power consumption. Increasing range generally requires higher power, as signal strength decreases with distance.",
+    "keywords": ["range vs power", "wireless tradeoff", "wifi", "zigbee", "bluetooth", "nfc"]
+  },
+  {
+    "id": "iot_m2_n5",
+    "subject": "IOT",
+    "module": "Module 2",
+    "topic": "Range vs Data Rate",
+    "content": "There is a tradeoff between transmission range and data rate. Higher frequencies provide higher bandwidth and data rates but reduce transmission distance and penetration capability. Lower frequencies can travel longer distances but support lower data rates. For example, 2.4 GHz provides higher data rate but shorter range compared to 900 MHz.",
+    "keywords": ["range vs data rate", "bandwidth", "frequency tradeoff"]
+  },
+  {
+    "id": "iot_m2_n6",
+    "subject": "IOT",
+    "module": "Module 2",
+    "topic": "Environmental Impact on Communication",
+    "content": "The performance of wireless communication is affected by environmental factors such as obstacles, terrain, and weather conditions. Line-of-sight communication provides better signal strength, while obstacles like buildings and walls cause signal attenuation. Antenna size and placement also influence communication efficiency and range.",
+    "keywords": ["environment", "signal attenuation", "line of sight", "antenna"]
+  },
+  {
+    "id": "iot_m2_n7",
+    "subject": "IOT",
+    "module": "Module 2",
+    "topic": "Application Layer in IoT",
+    "content": "The application layer in IoT handles end-user interactions and integrates data from devices into meaningful services. It includes protocols like HTTP and security mechanisms for safe communication. The application layer also supports diverse IoT applications such as smart homes, healthcare devices, and industrial automation systems.",
+    "keywords": ["application layer", "HTTP", "IoT applications"]
+  },
+  {
+    "id": "iot_m2_n8",
+    "subject": "IOT",
+    "module": "Module 2",
+    "topic": "Network Security",
+    "content": "Network security in IoT involves authentication, encryption, and access control. Authentication can be single-factor or multi-factor. Firewalls protect networks by filtering incoming and outgoing traffic. Encryption ensures data confidentiality using cryptographic keys. Additional measures include intrusion detection systems and antivirus software to prevent attacks such as malware and unauthorized access.",
+    "keywords": ["network security", "authentication", "firewall", "encryption"]
+  },
+  {
+    "id": "iot_m2_n9",
+    "subject": "IOT",
+    "module": "Module 2",
+    "topic": "ZigBee Technology",
+    "content": "ZigBee is a low-power, low-data-rate wireless communication technology based on IEEE 802.15.4. It is designed for short-range communication (10–100 meters) and supports mesh networking, allowing devices to relay data. ZigBee is widely used in IoT applications requiring long battery life, such as healthcare monitoring and smart home systems.",
+    "keywords": ["zigbee", "low power", "mesh network", "802.15.4"]
+  },
+  {
+    "id": "iot_m2_n10",
+    "subject": "IOT",
+    "module": "Module 2",
+    "topic": "WiFi in IoT",
+    "content": "WiFi is a widely used wireless communication technology that provides high data rates and moderate range (up to 100 meters). It consumes more power compared to ZigBee or Bluetooth. WiFi is commonly used in applications requiring high bandwidth such as video streaming, office networks, and industrial connectivity. Secure communication is achieved using protocols like TLS and SSL.",
+    "keywords": ["wifi", "high bandwidth", "tls", "ssl"]
+  },
+  {
+    "id": "iot_m2_n11",
+    "subject": "IOT",
+    "module": "Module 2",
+    "topic": "Secure Data Transmission (TLS/SSL)",
+    "content": "Transport Layer Security (TLS) and Secure Sockets Layer (SSL) are cryptographic protocols used to secure communication over networks. They ensure data confidentiality, integrity, and authentication between sender and receiver. These protocols are widely used in web applications, email services, and IoT systems to prevent unauthorized access and data breaches.",
+    "keywords": ["tls", "ssl", "encryption", "secure communication"]
+  }
+]
