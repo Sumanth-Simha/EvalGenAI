@@ -1,0 +1,90 @@
+[
+  {
+    "id": "iot_m4_n1",
+    "subject": "IOT",
+    "module": "Module 4",
+    "topic": "IoT Framework Overview",
+    "content": "The IoT framework for precision machines and services is organized into five functional layers: Things, Connect, Collect, Learn, and Do. This structure applies to both manufacturers (OEMs) and service companies to provide business value through technology. The framework allows for the analysis of solutions across diverse industries including mailing, mining, and agriculture.",
+    "keywords": ["IoT framework", "Things", "Connect", "Collect", "Learn", "Do", "Precision Service"]
+  },
+  {
+    "id": "iot_m4_n2",
+    "subject": "IOT",
+    "module": "Module 4",
+    "topic": "Data Ownership: Machine vs. Nomic Data",
+    "content": "A distinction is made between machine data (sensor info like voltage or reagent levels) and nomic data (the actual output, like a DNA sequence). There is an ongoing debate regarding data ownership between OEMs, who want machine data to improve quality, and service channels or users, who may restrict access to prevent competition or protect usage information.",
+    "keywords": ["machine data", "nomic data", "OEM", "data ownership"]
+  },
+  {
+    "id": "iot_m4_n3",
+    "subject": "IOT",
+    "module": "Module 4",
+    "topic": "Precision Mailing: Things and Sensors",
+    "content": "Industrial mailing involves high-volume printing and inserting. Inserters, like the Pitney Bowes Epic, operate at 22,000 pieces per hour and utilize hundreds of sensors to monitor motor RPM, mail velocity, thickness, and vacuum levels. These systems use industrial PCs running Windows with real-time extensions (RTX) for deterministic control.",
+    "keywords": ["precision mailing", "Pitney Bowes", "sensors", "RTX", "inserter"]
+  },
+  {
+    "id": "iot_m4_n4",
+    "subject": "IOT",
+    "module": "Module 4",
+    "topic": "Precision Mailing: Connectivity and Security",
+    "content": "Mailing inserters connect to the internet via Cisco 819 routers. Data is accumulated and checked every five minutes to ensure no Personally Identifiable Information (PII) is transmitted. The connection to GE's Predix platform is secured using Transport Layer Security (TLS) cryptographic protocols to provide end-to-end communication security.",
+    "keywords": ["Cisco 819", "PII", "TLS", "Predix", "connectivity"]
+  },
+  {
+    "id": "iot_m4_n5",
+    "subject": "IOT",
+    "module": "Module 4",
+    "topic": "GE Predix IoT Platform Services",
+    "content": "Predix is a microservices-based platform used for IoT applications. It includes Machine services for edge analytics, Asset services for relationship modeling, Security services for authentication/authorization, Connectivity services for wireless/internet links, and Data services for ingesting and storing time-series or operational data in SQL databases.",
+    "keywords": ["GE Predix", "microservices", "edge analytics", "time-series database"]
+  },
+  {
+    "id": "iot_m4_n6",
+    "subject": "IOT",
+    "module": "Module 4",
+    "topic": "Precision Mining: Longwall Systems",
+    "content": "Longwall mining systems are massive, mechanized structures up to 1,500 feet wide, weighing 15,000 tons. They utilize approximately 7,000 sensors to monitor parameters like motor current (up to 700 Amps), methane levels, vibration velocity, and hydraulic pressure. These systems include a Consolidated Controller Unit (CCU) running the VxWorks real-time operating system.",
+    "keywords": ["precision mining", "longwall system", "Joy Global", "VxWorks", "methane monitoring"]
+  },
+  {
+    "id": "iot_m4_n7",
+    "subject": "IOT",
+    "module": "Module 4",
+    "topic": "Precision Mining: Connectivity and Data Storage",
+    "content": "Mining equipment is connected via fiber optics, copper cables, and proprietary 2.4GHz WiFi (802.11b/g) for close proximity. A data concentrator collects points at 4MB per second. Data is stored in AspenTech's InfoPlus.21 time-series database (process historian) for at least a year, managing challenges across 11 different time zones.",
+    "keywords": ["fiber optic", "WiFi", "time-series database", "process historian", "InfoPlus.21"]
+  },
+  {
+    "id": "iot_m4_n8",
+    "subject": "IOT",
+    "module": "Module 4",
+    "topic": "Mining Analytics and Predictive Maintenance",
+    "content": "Joy Global uses oil and vibration analysis for lifecycle management. Oil analysis tracks wear metals (ppm) to predict gearbox or bearing failures. Advanced statistical techniques, including principal-component analysis and K-Means clustering, are used to explore data and provide early warning of catastrophic failures like roof collapses.",
+    "keywords": ["oil analysis", "vibration analysis", "predictive maintenance", "K-Means", "principal-component analysis"]
+  },
+  {
+    "id": "iot_m4_n9",
+    "subject": "IOT",
+    "module": "Module 4",
+    "topic": "Precision Agriculture: Smart Combines",
+    "content": "Modern combines, like the AGCO Gleaner, combine reaping, threshing, and winnowing. They feature touch-screen interfaces and sensors for live-yield mapping, moisture levels, and engine load. The AGCO Connectivity Module (ACM) uses an AMD processor running Linux to interface with GPS/location systems like Trimble and Novatel.",
+    "keywords": ["precision agriculture", "AGCO", "combine", "yield mapping", "ACM"]
+  },
+  {
+    "id": "iot_m4_n10",
+    "subject": "IOT",
+    "module": "Module 4",
+    "topic": "Agriculture Connectivity and Two-Pipe Data",
+    "content": "Combines primarily use 2G/3G cellular for data transfer. If cellular fails, they switch to Iridium satellite networks. AGCO employs a 'two-pipe' approach: machine data is stored in SQL on Azure for dealers/OEMs, while sensitive agronomic data (prescription maps, yield data) is handled via APIs for Farm Management Information Systems.",
+    "keywords": ["2G/3G", "Iridium satellite", "Azure", "agronomic data", "two-pipe approach"]
+  },
+  {
+    "id": "iot_m4_n11",
+    "subject": "IOT",
+    "module": "Module 4",
+    "topic": "Equipment-as-a-Service Business Models",
+    "content": "IoT connectivity enables new business models where machines are provided as a service. Examples include mining equipment-as-a-service priced per-ton-mined, and tractors-as-a-service sold by the hour. These models often include uptime guarantees (e.g., 87%) and move the maintenance burden from the customer to the provider or dealer.",
+    "keywords": ["Equipment-as-a-Service", "business models", "uptime guarantee", "service contracts"]
+  }
+]
