@@ -37,7 +37,6 @@ def generate_answer(query, notes, diagrams):
         for d in diagrams:
             diagram_text += f"""
 Diagram Title: {d.get('title', '')}
-Diagram Path: {d.get('image_path', '')}
 """
 
     prompt = f"""
@@ -64,7 +63,7 @@ Instructions:
 """
 
     try:
-        model = genai.GenerativeModel("gemini-1.5-flash")  # safer model
+        model = genai.GenerativeModel("gemini-3-flash-preview")  # safer model
 
         response = model.generate_content(prompt)
 

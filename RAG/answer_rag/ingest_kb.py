@@ -1,8 +1,6 @@
 import os
 import json
 from sentence_transformers import SentenceTransformer
-import chromadb
-from chromadb.config import Settings
 from utils.db import get_chroma_client
 
 # =========================
@@ -10,12 +8,6 @@ from utils.db import get_chroma_client
 # =========================
 
 EMBED_MODEL = SentenceTransformer("all-MiniLM-L6-v2")
-
-import os
-
-BASE_DIR = os.path.abspath(os.path.join(os.path.dirname(__file__), "../../"))
-
-from utils.db import get_chroma_client
 
 CHROMA_CLIENT = get_chroma_client()
 COLLECTION = CHROMA_CLIENT.get_or_create_collection(name="iot_kb")
@@ -64,7 +56,7 @@ def load_all_notes():
 
 
 # =========================
-# LOAD ALL DIAGRAMS
+# LOAD ALL DIAGRAMS (FIXED 🔥)
 # =========================
 
 def load_all_diagrams():
@@ -85,16 +77,27 @@ def load_all_diagrams():
 
             for d in diagrams:
                 try:
-                    doc_text = f"{d['title']}. {d['description']}"
+                    # 🔥 HANDLE BOTH JSON FORMATS (caption/title safe)
+                    title = d.get("title") or d.get("topic", "Diagram")
+                    description = d.get("description") or d.get("caption", "")
+
+                    doc_text = f"{title}. {description}"
 
                     documents.append(doc_text)
 
+                    # 🔥 FORCE CORRECT IMAGE PATH
+                    filename = os.path.basename(d.get("image_path", ""))
+
+                    correct_path = os.path.join(
+                        "data", "iot", module, "diagrams", "images", filename
+                    )
+
                     metadatas.append({
                         "type": "diagram",
-                        "topic": ", ".join(d.get("topics", [])),
+                        "topic": d.get("topic", ""),
                         "module": module,
-                        "image_path": d.get("image_path", ""),
-                        "title": d.get("title", "")
+                        "image_path": correct_path,   # ✅ FIXED HERE
+                        "title": title
                     })
 
                     ids.append(f"{module}_{d['id']}")
@@ -112,11 +115,9 @@ def load_all_diagrams():
 def ingest_all():
     print("🚀 Starting ingestion...\n")
 
-    # Load data
     note_docs, note_meta, note_ids = load_all_notes()
     diag_docs, diag_meta, diag_ids = load_all_diagrams()
 
-    # Combine
     documents = note_docs + diag_docs
     metadatas = note_meta + diag_meta
     ids = note_ids + diag_ids
@@ -127,24 +128,21 @@ def ingest_all():
 
     print(f"📦 Total documents loaded: {len(documents)}")
 
-    # Generate embeddings
     embeddings = EMBED_MODEL.encode(documents).tolist()
 
-    # 🔥 Clear existing DB (safe re-run)
+    # clear old DB
     try:
         COLLECTION.delete(where={})
         print("🧹 Cleared existing collection")
     except:
         print("⚠️ Could not clear collection (might be empty)")
 
-    # Add to DB
     COLLECTION.add(
         documents=documents,
         metadatas=metadatas,
         ids=ids,
         embeddings=embeddings
     )
-    
 
     print("\n✅ Ingestion completed successfully!")
     print(f"📊 Notes: {len(note_docs)}")
