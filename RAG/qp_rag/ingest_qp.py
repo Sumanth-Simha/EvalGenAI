@@ -1,8 +1,7 @@
 import os
 import json
 from sentence_transformers import SentenceTransformer
-
-from utils.db import get_chroma_client  # 🔥 unified DB
+from utils.db import get_chroma_client
 
 # =========================
 # CONFIG
@@ -15,21 +14,29 @@ COLLECTION = CHROMA_CLIENT.get_or_create_collection(name="iot_qp")
 
 
 # =========================
-# LOAD ALL QUESTIONS
+# SMART QUESTION EXTRACTOR 🔥
 # =========================
 
 def extract_question(item, file):
     """
-    Handles different formats safely
+    Handles ALL possible formats safely
     """
-    q_text = item.get("q") or item.get("question")
 
-    if not q_text:
-        print(f"⚠️ Skipping invalid question in {file}")
+    if not isinstance(item, dict):
         return None
 
-    return q_text
+    # 🔥 try multiple keys
+    for key in ["q", "question", "text", "content"]:
+        val = item.get(key)
+        if isinstance(val, str) and val.strip():
+            return val.strip()
 
+    return None
+
+
+# =========================
+# LOAD ALL QUESTIONS
+# =========================
 
 def load_all_questions():
     base_path = "data/iot"
@@ -39,8 +46,9 @@ def load_all_questions():
     ids = []
 
     counter = 0
+    skipped = 0
 
-    # 🔥 ASSIGNMENTS (SUPERSET)
+    # 🔥 ASSIGNMENTS / SUPERSET
     assign_path = os.path.join(base_path, "superset")
     if os.path.exists(assign_path):
         for file in os.listdir(assign_path):
@@ -50,19 +58,22 @@ def load_all_questions():
                 with open(file_path, "r", encoding="utf-8") as f:
                     data = json.load(f)
 
-                    for item in data:
-                        q_text = extract_question(item, file)
+                    if isinstance(data, list):
+                        for item in data:
+                            q_text = extract_question(item, file)
 
-                        if q_text:
-                            documents.append(q_text)
-                            metadatas.append({
-                                "type": "assignment",
-                                "topic": item.get("topic", "unknown")
-                            })
-                            ids.append(f"assign_{counter}")
-                            counter += 1
+                            if q_text:
+                                documents.append(q_text)
+                                metadatas.append({
+                                    "type": "assignment",
+                                    "topic": item.get("topic", "unknown")
+                                })
+                                ids.append(f"assign_{counter}")
+                                counter += 1
+                            else:
+                                skipped += 1
 
-    # 🔥 PYQ (includes IA papers)
+    # 🔥 PYQ + IA
     pyq_path = os.path.join(base_path, "pyq")
     if os.path.exists(pyq_path):
         for file in os.listdir(pyq_path):
@@ -72,7 +83,7 @@ def load_all_questions():
                 with open(file_path, "r", encoding="utf-8") as f:
                     data = json.load(f)
 
-                    # 🔥 Handle IA structured format
+                    # CASE 1: simple list
                     if isinstance(data, list):
                         for item in data:
                             q_text = extract_question(item, file)
@@ -85,11 +96,16 @@ def load_all_questions():
                                 })
                                 ids.append(f"pyq_{counter}")
                                 counter += 1
+                            else:
+                                skipped += 1
 
+                    # CASE 2: IA structured
                     elif isinstance(data, dict) and "questions" in data:
                         for qn in data["questions"]:
-                            for opt in qn.get("options", []):
-                                q_text = opt.get("question")
+                            options = qn.get("options", [])
+
+                            for opt in options:
+                                q_text = extract_question(opt, file)
 
                                 if q_text:
                                     documents.append(q_text)
@@ -100,7 +116,9 @@ def load_all_questions():
                                     ids.append(f"pyq_{counter}")
                                     counter += 1
                                 else:
-                                    print(f"⚠️ Skipping invalid IA entry in {file}")
+                                    skipped += 1
+
+    print(f"⚠️ Skipped {skipped} invalid entries")
 
     return documents, metadatas, ids
 
