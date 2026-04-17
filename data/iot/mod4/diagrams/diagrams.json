@@ -1,0 +1,40 @@
+[
+  {
+    "id": "img_m4_1",
+    "subject": "IOT",
+    "module": "mod4",
+    "topic": "Joy Global Services Architecture",
+    "title": "Joy Global Services Architecture",
+    "description": "Architecture showing customer requirements, service components, lifecycle services, and global coordination in Joy Global IoT services.",
+    "tags": [
+      "joy global",
+      "services",
+      "architecture",
+      "iot",
+      "customer",
+      "lifecycle"
+    ],
+    "image_path": "data/iot/mod4/diagrams/images/joy_global_services.png",
+    "diagram_type": "architecture",
+    "importance": "high"
+  },
+  {
+    "id": "img_m4_2",
+    "subject": "IOT",
+    "module": "mod4",
+    "topic": "IoT Application Architecture",
+    "title": "IoT Application Architecture",
+    "description": "End-to-end IoT application architecture showing mine sites, gateways, data ingestion, real-time processing, analytics, and dashboard services.",
+    "tags": [
+      "iot",
+      "application architecture",
+      "data pipeline",
+      "analytics",
+      "dashboard",
+      "real-time"
+    ],
+    "image_path": "data/iot/mod4/diagrams/images/iot_application_architecture.png",
+    "diagram_type": "architecture",
+    "importance": "high"
+  }
+]
