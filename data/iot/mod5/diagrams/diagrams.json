@@ -1,0 +1,74 @@
+[
+  {
+    "id": "img_m5_1",
+    "subject": "IOT",
+    "module": "mod5",
+    "topic": "PMU Network",
+    "title": "PMU Network Architecture",
+    "description": "Phasor Measurement Unit (PMU) network showing GPS synchronization, routers, PDCs, and Super PDC for wide-area monitoring systems.",
+    "tags": ["pmu", "network", "gps", "pdc", "iot", "power systems"],
+    "image_path": "data/iot/mod5/diagrams/images/pmu_network.png",
+    "diagram_type": "architecture",
+    "importance": "high"
+  },
+  {
+    "id": "img_m5_2",
+    "subject": "IOT",
+    "module": "mod5",
+    "topic": "Similarity Analysis",
+    "title": "Similarity Analysis - Good Match",
+    "description": "Graph showing strong similarity between input and target sequences indicating a good match in time series analysis.",
+    "tags": ["similarity", "analysis", "time series", "good match", "iot"],
+    "image_path": "data/iot/mod5/diagrams/images/similarity_good_match.png",
+    "diagram_type": "graph",
+    "importance": "medium"
+  },
+  {
+    "id": "img_m5_3",
+    "subject": "IOT",
+    "module": "mod5",
+    "topic": "Similarity Analysis",
+    "title": "Similarity Analysis - Bad Match",
+    "description": "Graph showing poor alignment between input and target sequences indicating a bad match in time series analysis.",
+    "tags": ["similarity", "analysis", "time series", "bad match", "iot"],
+    "image_path": "data/iot/mod5/diagrams/images/similarity_bad_match.png",
+    "diagram_type": "graph",
+    "importance": "medium"
+  },
+  {
+    "id": "img_m5_4",
+    "subject": "IOT",
+    "module": "mod5",
+    "topic": "Connection Architecture",
+    "title": "IoT Connection Architecture",
+    "description": "Architecture showing GPRS stations, local and remote UHF networks, gateways, and communication bridges in IoT systems.",
+    "tags": ["connection", "architecture", "gprs", "uhf", "iot", "network"],
+    "image_path": "data/iot/mod5/diagrams/images/connection_architecture.png",
+    "diagram_type": "architecture",
+    "importance": "high"
+  },
+  {
+    "id": "img_m5_5",
+    "subject": "IOT",
+    "module": "mod5",
+    "topic": "Smart Car Architecture",
+    "title": "High-Level SAM Car Architecture",
+    "description": "Smart automotive architecture showing sensors, cameras, actuators, GPS unit, and control systems in a connected vehicle.",
+    "tags": ["smart car", "automotive", "sensors", "actuators", "iot"],
+    "image_path": "data/iot/mod5/diagrams/images/sam_car_architecture.png",
+    "diagram_type": "architecture",
+    "importance": "high"
+  },
+  {
+    "id": "img_m5_6",
+    "subject": "IOT",
+    "module": "mod5",
+    "topic": "Healthcare IoT",
+    "title": "SensiumVitals Healthcare Architecture",
+    "description": "IoT-based healthcare monitoring system with wearable sensors, hospital network, cloud processing, and notification systems.",
+    "tags": ["healthcare", "iot", "sensors", "cloud", "monitoring"],
+    "image_path": "data/iot/mod5/diagrams/images/sensium_vitals.png",
+    "diagram_type": "architecture",
+    "importance": "high"
+  }
+]
