@@ -1,0 +1,98 @@
+[
+  {
+    "id": "iot_m5_n1",
+    "subject": "IOT",
+    "module": "Module 5",
+    "topic": "Precision Healthcare: Things (Sensium Vitals)",
+    "content": "Sensium Vitals is a light-weight, single-use wireless patch that monitors heart rate, respiration rate, and temperature[cite: 592, 597]. It uses a proprietary SoC based on the Intel 8051 microcontroller running at 16MHz[cite: 610, 612]. The system takes measurements every two minutes—providing 4,320 data points per day—which is significantly more frequent than traditional manual monitoring every 4–8 hours[cite: 606, 609].",
+    "keywords": ["Sensium Vitals", "wearable sensors", "8051 microcontroller", "continuous monitoring"]
+  },
+  {
+    "id": "iot_m5_n2",
+    "subject": "IOT",
+    "module": "Module 5",
+    "topic": "Precision Healthcare: Connectivity (ZigBee)",
+    "content": "The healthcare patch connects via a proprietary ZigBee-like protocol (IEEE 802.15.4) operating in the 915MHz ISM band[cite: 616, 620]. ZigBee is chosen for its low power consumption, mesh networking capabilities, and 128-bit symmetric encryption security[cite: 619, 621, 623]. Bridges connect patches to hospital servers, allowing data to be stored for up to three hours if the wearer moves out of network coverage[cite: 630, 632].",
+    "keywords": ["ZigBee", "mesh network", "915MHz", "ISM band", "healthcare connectivity"]
+  },
+  {
+    "id": "iot_m5_n3",
+    "subject": "IOT",
+    "module": "Module 5",
+    "topic": "Healthcare Data Collection: Hadoop and EMR",
+    "content": "Vital sign data is collected in a Hortonworks Hadoop environment, which utilizes HDFS for storage and MapReduce for parallel processing[cite: 636, 639, 641]. For clinical use, data is integrated into Electronic Medical Record (EMR) applications like AllScripts' Sunrise using DeviceConX middleware[cite: 645, 648, 651]. This integration reduces transcription errors inherent in manual data entry[cite: 650].",
+    "keywords": ["Hadoop", "HDFS", "EMR", "EHR", "DeviceConX"]
+  },
+  {
+    "id": "iot_m5_n4",
+    "subject": "IOT",
+    "module": "Module 5",
+    "topic": "Healthcare Analytics: Predictive Modeling",
+    "content": "Predictive models, such as ARIMA and Support Vector Machines (SVM) written in R, were developed to recognize patterns in time-series data like SpO2, pCO2, and systolic blood pressure[cite: 655, 658, 662, 664]. These models aim to predict 'Code Blue' events (resuscitation needs) with reasonable accuracy within 90 seconds of the event[cite: 656, 674].",
+    "keywords": ["predictive modeling", "ARIMA", "SVM", "Code Blue", "R programming"]
+  },
+  {
+    "id": "iot_m5_n5",
+    "subject": "IOT",
+    "module": "Module 5",
+    "topic": "Precision Power: Phasor Measurement Units (PMU)",
+    "content": "A PMU measures electrical waves (voltage, current, frequency, and phasor angle) 60 times per second—over 200 times faster than legacy systems[cite: 681, 690, 691]. PMUs use built-in GPS receivers for nanosecond-level time synchronization across the grid to produce synchrophasors[cite: 683, 694, 695]. Devices like the SEL-421 utilize FPGAs and digital signal processors for real-time grid monitoring[cite: 700, 701].",
+    "keywords": ["PMU", "synchrophasor", "GPS synchronization", "SEL-421", "grid stability"]
+  },
+  {
+    "id": "iot_m5_n6",
+    "subject": "IOT",
+    "module": "Module 5",
+    "topic": "Precision Power: Network Security",
+    "content": "PMU data is transmitted to Phasor Data Collectors (PDCs) via the IEEE C37.118 protocol[cite: 704, 727]. Security gateways (firewalls) establish VPN connections between substations to encrypt data and protect against denial of service, man-in-the-middle, and data-spoofing attacks[cite: 729, 733, 735]. Experts warn that a successful cyberattack on the power grid could leave millions without power for up to two years[cite: 737].",
+    "keywords": ["IEEE C37.118", "PDC", "VPN", "cybersecurity", "firewall"]
+  },
+  {
+    "id": "iot_m5_n7",
+    "subject": "IOT",
+    "module": "Module 5",
+    "topic": "Power Grid Analytics: SAS Event Stream Processing",
+    "content": "Duke Energy uses SAS Enterprise Miner to build decision trees for identifying events like lightning strikes or equipment failures[cite: 748, 760]. Real-time analysis is managed via SAS Event Stream Processing (ESP), which identifies deviations from normal patterns through similarity analysis and clustering[cite: 742, 755, 761]. This helps operators distinguish between non-consequential events and those causing cause for concern, such as grid oscillations[cite: 762, 794].",
+    "keywords": ["SAS ESP", "decision trees", "event detection", "similarity analysis", "clustering"]
+  },
+  {
+    "id": "iot_m5_n8",
+    "subject": "IOT",
+    "module": "Module 5",
+    "topic": "Precision Water: Things and Sensors",
+    "content": "McCrometer provides IoT solutions for water management using Mc Mag 3000 electromagnetic flow meters, weather stations, and soil-moisture probes[cite: 839, 840, 846]. Weather stations report variables like solar radiation and leaf wetness to estimate crop water demand and disease risk[cite: 844, 845]. Soil sensors measure 'percent volume of water' or soil water tension to guide irrigation and fertilizer decisions[cite: 847, 848, 849].",
+    "keywords": ["Mc Mag 3000", "flow meter", "weather station", "soil moisture probe"]
+  },
+  {
+    "id": "iot_m5_n9",
+    "subject": "IOT",
+    "module": "Module 5",
+    "topic": "Water Connectivity: UHF and GPRS",
+    "content": "Water sensors connect via licensed UHF radio (460-470 MHz) for ranges of 1–12 miles or through GPRS cellular networks using SIM cards[cite: 851, 852, 854, 876]. Gateways run Linux on Intel servers to manage hundreds to thousands of meters[cite: 855, 856]. Data is typically transmitted every 15 minutes, and RTUs can store up to six months of historical data if communication is lost[cite: 884, 886, 888].",
+    "keywords": ["UHF radio", "GPRS", "RTU", "water district", "AT&T", "T-Mobile"]
+  },
+  {
+    "id": "iot_m5_n10",
+    "subject": "IOT",
+    "module": "Module 5",
+    "topic": "Precision Water: Learning and Disease Prediction",
+    "content": "Farmers use flow rate and pressure data as diagnostics to detect leaks or pump degradation[cite: 900, 902, 903]. Predictive modeling of the 'disease triangle' (host, disease, and environment) allows for spray-on-demand pesticide cycles, reducing costs and preventing pesticide resistance[cite: 920, 922, 923]. One farm saved \$200 per acre by predicting a rhizoctonia patch outbreak in turf[cite: 926, 928].",
+    "keywords": ["irrigation management", "groundwater model", "disease triangle", "pesticide optimization"]
+  },
+  {
+    "id": "iot_m5_n11",
+    "subject": "IOT",
+    "module": "Module 5",
+    "topic": "Precision Race Car: Semi-Autonomous Motorcar (SAM)",
+    "content": "The SAM Car is a modified Corvette Z06 designed to enable paralyzed drivers to operate a vehicle independently[cite: 950, 951]. It uses eight infrared sensors in the driver's helmet/sunglasses and four cameras to translate head movement into steering[cite: 960, 963]. Acceleration and braking are controlled via a mouthpiece with an NXP pressure sensor; puffing air accelerates while sipping air brakes[cite: 966, 969].",
+    "keywords": ["SAM Car", "Paravan system", "NXP sensor", "infrared steering", "semi-autonomous"]
+  },
+  {
+    "id": "iot_m5_n12",
+    "subject": "IOT",
+    "module": "Module 5",
+    "topic": "SAM Car Connectivity and Cloud",
+    "content": "The car connects to the Arrow Connect Cloud via 4G LTE using TLS 1.2 and AES-256 encryption[cite: 976, 977]. GPS-based 'visual curbs' keep the car within 1.5 meters of the track edge and can auto-correct the vehicle's course[cite: 978, 979, 981]. The cloud platform uses Microsoft Azure and MongoDB to store telemetry data and video for real-time visualization on dashboards[cite: 986, 1001, 1002].",
+    "keywords": ["4G LTE", "Azure", "MongoDB", "telemetry", "visual curbs"]
+  }
+]
