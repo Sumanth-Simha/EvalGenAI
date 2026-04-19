@@ -76,7 +76,7 @@
     "subject": "IOT",
     "module": "Module 5",
     "topic": "Precision Water: Learning and Disease Prediction",
-    "content": "Farmers use flow rate and pressure data as diagnostics to detect leaks or pump degradation[cite: 900, 902, 903]. Predictive modeling of the 'disease triangle' (host, disease, and environment) allows for spray-on-demand pesticide cycles, reducing costs and preventing pesticide resistance[cite: 920, 922, 923]. One farm saved \$200 per acre by predicting a rhizoctonia patch outbreak in turf[cite: 926, 928].",
+    "content": "Farmers use flow rate and pressure data as diagnostics to detect leaks or pump degradation[cite: 900, 902, 903]. Predictive modeling of the 'disease triangle' (host, disease, and environment) allows for spray-on-demand pesticide cycles, reducing costs and preventing pesticide resistance[cite: 920, 922, 923]. One farm saved $200 per acre by predicting a rhizoctonia patch outbreak in turf[cite: 926, 928].",
     "keywords": ["irrigation management", "groundwater model", "disease triangle", "pesticide optimization"]
   },
   {

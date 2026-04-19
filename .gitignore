@@ -1,7 +1,5 @@
 # Virtual Environment
-venv/
-env/
-ENV/
+eval2/
 eval/
 
 # Environment variables

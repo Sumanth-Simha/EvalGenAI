@@ -1,5 +1,6 @@
 from sentence_transformers import SentenceTransformer
 from utils.db import get_chroma_client
+import re
 
 # =========================
 # CONFIG
@@ -11,28 +12,61 @@ CHROMA_CLIENT = get_chroma_client()
 COLLECTION = CHROMA_CLIENT.get_or_create_collection(name="iot_qp")
 
 
+# =========================
+# MODULE EXTRACTOR 🔥
+# =========================
+
+def extract_module(query):
+    match = re.search(r"module\s*(\d+)", query.lower())
+    if match:
+        return f"Module {match.group(1)}"
+    return None
+
+
+# =========================
+# PREDICT QUESTIONS
+# =========================
 
 def predict_questions(query, top_k=15):
     query_embedding = EMBED_MODEL.encode([query]).tolist()
 
+    module = extract_module(query)
+
+    # 🔥 STRICT FILTER (NO DIAGRAMS EVER)
+    where_clause = {
+        "type": {"$in": ["assignment", "pyq"]}
+    }
+
+    if module:
+        where_clause = {
+            "$and": [
+                {"type": {"$in": ["assignment", "pyq"]}},
+                {"module": module}
+            ]
+        }
+
     results = COLLECTION.query(
         query_embeddings=query_embedding,
-        n_results=top_k
+        n_results=top_k,
+        where=where_clause
     )
 
-    docs = results["documents"][0]
-    metas = results["metadatas"][0]
+    docs = results.get("documents", [[]])[0]
+    metas = results.get("metadatas", [[]])[0]
+
+    if not docs:
+        return "⚠️ No relevant questions found."
 
     scored = []
 
     for doc, meta in zip(docs, metas):
         score = 0
 
-        if meta["type"] == "assignment":
+        if meta.get("type") == "assignment":
             score += 3
-        elif meta["type"] == "ia":
+        elif meta.get("type") == "ia":
             score += 2
-        elif meta["type"] == "pyq":
+        elif meta.get("type") == "pyq":
             score += 1
 
         scored.append((doc, score))
@@ -46,16 +80,19 @@ def predict_questions(query, top_k=15):
 
     for q, score in scored:
         if q not in seen:
-            final.append((q, score))
+            final.append(q)
             seen.add(q)
 
         if len(final) == 5:
             break
 
-    # 🔥 FORMAT OUTPUT (THIS IS THE FIX)
+    # 🔥 CLEAN OUTPUT
     formatted = "🔥 Predicted Important Questions\n\n"
 
-    for i, (q, score) in enumerate(final, 1):
+    if module:
+        formatted += f"📘 {module}\n\n"
+
+    for i, q in enumerate(final, 1):
         formatted += f"{i}. {q}\n\n"
 
     formatted += "💡 Focus on these for exams.\n"

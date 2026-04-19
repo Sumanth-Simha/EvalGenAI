@@ -19,17 +19,24 @@ COLLECTION = CHROMA_CLIENT.get_or_create_collection(name="iot_qp")
 
 def extract_question(item, file):
     """
-    Handles ALL possible formats safely
+    Ultra-robust extractor
     """
 
-    if not isinstance(item, dict):
-        return None
+    # case 1: direct string
+    if isinstance(item, str) and item.strip():
+        return item.strip()
 
-    # 🔥 try multiple keys
-    for key in ["q", "question", "text", "content"]:
-        val = item.get(key)
-        if isinstance(val, str) and val.strip():
-            return val.strip()
+    # case 2: dict
+    if isinstance(item, dict):
+        for key in ["q", "question", "text", "content"]:
+            val = item.get(key)
+            if isinstance(val, str) and val.strip():
+                return val.strip()
+
+        # 🔥 fallback: scan all values
+        for val in item.values():
+            if isinstance(val, str) and len(val.strip()) > 10:
+                return val.strip()
 
     return None
 
@@ -48,8 +55,12 @@ def load_all_questions():
     counter = 0
     skipped = 0
 
+    # =========================
     # 🔥 ASSIGNMENTS / SUPERSET
+    # =========================
+
     assign_path = os.path.join(base_path, "superset")
+
     if os.path.exists(assign_path):
         for file in os.listdir(assign_path):
             if file.endswith(".json"):
@@ -59,22 +70,49 @@ def load_all_questions():
                     data = json.load(f)
 
                     if isinstance(data, list):
-                        for item in data:
-                            q_text = extract_question(item, file)
+                        for block in data:
 
-                            if q_text:
-                                documents.append(q_text)
-                                metadatas.append({
-                                    "type": "assignment",
-                                    "topic": item.get("topic", "unknown")
-                                })
-                                ids.append(f"assign_{counter}")
-                                counter += 1
+                            # 🔥 HANDLE YOUR STRUCTURE HERE
+                            if isinstance(block, dict) and "questions" in block:
+                                module_name = block.get("module", "unknown")
+
+                                for item in block["questions"]:
+                                    q_text = extract_question(item, file)
+
+                                    if q_text:
+                                        documents.append(q_text)
+                                        metadatas.append({
+                                            "type": "assignment",
+                                            "topic": item.get("topic", "unknown"),
+                                            "module": module_name
+                                        })
+                                        ids.append(f"assign_{counter}")
+                                        counter += 1
+                                    else:
+                                        skipped += 1
+
                             else:
-                                skipped += 1
+                                # fallback (if flat list)
+                                q_text = extract_question(block, file)
 
+                                if q_text:
+                                    documents.append(q_text)
+                                    metadatas.append({
+                                        "type": "assignment",
+                                        "topic": block.get("topic", "unknown"),
+                                        "module": block.get("module", "unknown")
+                                    })
+                                    ids.append(f"assign_{counter}")
+                                    counter += 1
+                                else:
+                                    skipped += 1
+
+    # =========================
     # 🔥 PYQ + IA
+    # =========================
+
     pyq_path = os.path.join(base_path, "pyq")
+
     if os.path.exists(pyq_path):
         for file in os.listdir(pyq_path):
             if file.endswith(".json"):
@@ -92,7 +130,8 @@ def load_all_questions():
                                 documents.append(q_text)
                                 metadatas.append({
                                     "type": "pyq",
-                                    "topic": item.get("topic", "unknown")
+                                    "topic": item.get("topic", "unknown"),
+                                    "module": item.get("module", "unknown")
                                 })
                                 ids.append(f"pyq_{counter}")
                                 counter += 1
@@ -111,7 +150,8 @@ def load_all_questions():
                                     documents.append(q_text)
                                     metadatas.append({
                                         "type": "pyq",
-                                        "topic": opt.get("topic", "unknown")
+                                        "topic": opt.get("topic", "unknown"),
+                                        "module": opt.get("module", "unknown")
                                     })
                                     ids.append(f"pyq_{counter}")
                                     counter += 1
