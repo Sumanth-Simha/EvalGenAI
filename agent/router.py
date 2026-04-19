@@ -4,7 +4,7 @@ from agent.classifier import classify
 from RAG.answer_rag.retrieve import retrieve_answer
 from RAG.qp_rag.retrieve_qp import predict_questions
 from RAG.qp_rag.generate_paper import build_pairs, format_ia_paper
-
+from RAG.qp_rag.generate_sem_paper import generate_sem_paper
 
 # =========================
 # HELPER
@@ -34,14 +34,19 @@ def extract_questions_list(result):
 # =========================
 # ROUTER
 # =========================
-
 def route(query: str):
     task = classify(query)
 
     print(f"\n🧠 Detected Task: {task.upper()}")
 
-    # 🔥 QUESTION PAPER GENERATION
-    if "question paper" in query.lower() or "ia paper" in query.lower():
+    query_lower = query.lower()
+
+    # 🔥 SEM PAPER (CHECK FIRST)
+    if "sem paper" in query_lower or "semester paper" in query_lower:
+        return generate_sem_paper(query)
+
+    # 🔥 IA PAPER
+    if "question paper" in query_lower or "ia paper" in query_lower:
         questions = predict_questions(query, top_k=20)
 
         q_list = extract_questions_list(questions)
